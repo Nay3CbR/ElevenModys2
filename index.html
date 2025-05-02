@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eleven Modys Official</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #1a1a1a, #c00);
+      color: #f00;
+      overflow-x: hidden;
+    }
+    header {
+      text-align: center;
+      padding: 20px 10px;
+      background: #111;
+      border-bottom: 2px solid #f00;
+    }
+    header h1 {
+      font-size: 2em;
+      color: #f00;
+      text-shadow: 0 0 8px red;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px;
+      background: #1a1a1a;
+    }
+    nav button {
+      background: #f00;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 0.9em;
+      cursor: pointer;
+      box-shadow: 0 0 8px #f00;
+      transition: 0.3s;
+    }
+    nav button:hover {
+      background: #fff;
+      color: #f00;
+    }
+    .section {
+      display: none;
+      padding: 20px 10px;
+    }
+    .active {
+      display: block;
+    }
+    .card {
+      background: #1a1a1a;
+      border: 2px solid #f00;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px #f00;
+      text-align: center;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #fff;
+      background: #f00;
+      padding: 8px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 10px;
+      color: #aaa;
+      border-top: 1px solid #f00;
+    }
+    iframe {
+      width: 100%;
+      height: 250px;
+      border: 0;
+    }
+    .download-gui {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 15px;
+      border: 2px solid #f00;
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 0 8px #f00;
+      width: 80%;
+    }
+    .download-gui h2 {
+      margin-bottom: 15px;
+      font-size: 1.2em;
+    }
+    .download-gui p {
+      font-size: 1em;
+    }
+    .download-gui .close-btn {
+      background: #f00;
+      color: #fff;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+      margin-top: 15px;
+    }
+    .download-gui .close-btn:hover {
+      background: #fff;
+      color: #f00;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.6em;
+      }
+      nav button {
+        padding: 8px 12px;
+        font-size: 0.8em;
+      }
+      .card {
+        padding: 12px;
+        font-size: 0.9em;
+      }
+      iframe {
+        height: 200px;
+      }
+      .download-gui {
+        width: 90%;
+      }
+      .download-gui h2 {
+        font-size: 1.1em;
+      }
+      .download-gui p {
+        font-size: 0.9em;
+      }
+      .download-gui .close-btn {
+        padding: 8px 12px;
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Eleven Modys Official</h1>
+  </header>
+
+  <nav>
+    <button onclick="showSection('admin')">Admin Panel</button>
+    <button onclick="showSection('telegram')">Telegram</button>
+  </nav>
+
+  <section id="admin" class="section">
+    <div class="card">
+      <h3>Eternal Hack</h3>
+      <p>Speed mod and hack for a unique experience.</p>
+      <iframe src="https://www.youtube.com/embed/ZjPGgC2VXuw" title="Eternal Hack Video"></iframe>
+      <p><a href="https://www.mediafire.com/file/ikk15om85pgy783/AdminPanel_2.111.2.apk/file" target="_blank">Download Link</a></p>
+      <p><strong>Download By Eleven Modys</strong></p>
+    </div>
+
+    <div class="card">
+      <h3>Mod de Duplicar no Jailbreak</h3>
+      <p>Use esse mod para duplicar no Jailbreak de forma prática e eficiente.</p>
+      <iframe src="https://www.youtube.com/embed/Ib_8q8vnF20" title="Mod Jailbreak"></iframe>
+      <p><a href="https://www.mediafire.com/file/4859l49w17fptfr/blockman-go.apk/file?dkey=cvwwss21lxi&r=561#&dkey=4859l49w17fptfr" target="_blank">Download Link</a></p>
+      <p><strong>Download By Eleven Modys</strong></p>
+    </div>
+  </section>
+
+  <section id="telegram" class="section">
+    <div class="card">
+      <h3>Telegram Community</h3>
+      <p><a href="https://t.me/ElevenModysCommunity" target="_blank">Visit Channel</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Eleven Modys Official — All rights reserved.</p>
+  </footer>
+
+  <div id="download-gui" class="download-gui">
+    <h2>Download Admin Panel Update</h2>
+    <p>Blockman Go No Password</p>
+    <p><strong>Eleven Modys</strong></p>
+    <button class="close-btn" onclick="closeDownloadGUI()">Close</button>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+
+    function openDownloadGUI() {
+      document.getElementById('download-gui').style.display = 'block';
+    }
+
+    function closeDownloadGUI() {
+      document.getElementById('download-gui').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
