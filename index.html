@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Eleven Modys Official</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      margin: 0; padding: 0; box-sizing: border-box;
     }
     body {
       font-family: 'Orbitron', sans-serif;
@@ -31,6 +30,7 @@
     nav {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 10px;
       padding: 10px;
       background: #1a1a1a;
@@ -44,7 +44,10 @@
       font-size: 0.9em;
       cursor: pointer;
       box-shadow: 0 0 8px #f00;
-      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.3s;
     }
     nav button:hover {
       background: #fff;
@@ -53,6 +56,7 @@
     .section {
       display: none;
       padding: 20px 10px;
+      animation: fadeIn 0.5s ease-in;
     }
     .active {
       display: block;
@@ -65,6 +69,10 @@
       border-radius: 10px;
       box-shadow: 0 0 8px #f00;
       text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.02);
     }
     .card a {
       display: inline-block;
@@ -75,6 +83,11 @@
       border-radius: 5px;
       text-decoration: none;
     }
+    iframe {
+      width: 100%;
+      height: 250px;
+      border: 0;
+    }
     footer {
       background: #111;
       text-align: center;
@@ -82,16 +95,10 @@
       color: #aaa;
       border-top: 1px solid #f00;
     }
-    iframe {
-      width: 100%;
-      height: 250px;
-      border: 0;
-    }
     .download-gui {
       display: none;
       position: fixed;
-      top: 50%;
-      left: 50%;
+      top: 50%; left: 50%;
       transform: translate(-50%, -50%);
       background-color: rgba(0, 0, 0, 0.8);
       padding: 20px;
@@ -104,10 +111,6 @@
     }
     .download-gui h2 {
       margin-bottom: 15px;
-      font-size: 1.2em;
-    }
-    .download-gui p {
-      font-size: 1em;
     }
     .download-gui .close-btn {
       background: #f00;
@@ -116,7 +119,6 @@
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      font-size: 1em;
       margin-top: 15px;
     }
     .download-gui .close-btn:hover {
@@ -128,33 +130,11 @@
       to { opacity: 1; transform: translateY(0); }
     }
     @media (max-width: 480px) {
-      header h1 {
-        font-size: 1.6em;
-      }
-      nav button {
-        padding: 8px 12px;
-        font-size: 0.8em;
-      }
-      .card {
-        padding: 12px;
-        font-size: 0.9em;
-      }
-      iframe {
-        height: 200px;
-      }
-      .download-gui {
-        width: 90%;
-      }
-      .download-gui h2 {
-        font-size: 1.1em;
-      }
-      .download-gui p {
-        font-size: 0.9em;
-      }
-      .download-gui .close-btn {
-        padding: 8px 12px;
-        font-size: 0.9em;
-      }
+      header h1 { font-size: 1.6em; }
+      nav button { padding: 8px 12px; font-size: 0.8em; }
+      .card { font-size: 0.9em; }
+      iframe { height: 200px; }
+      .download-gui { width: 90%; }
     }
   </style>
 </head>
@@ -164,11 +144,30 @@
   </header>
 
   <nav>
-    <button onclick="showSection('admin')">Admin Panel</button>
-    <button onclick="showSection('telegram')">Telegram</button>
+    <button onclick="showSection('home')"><i data-lucide="home"></i> Home</button>
+    <button onclick="showSection('admin')"><i data-lucide="terminal"></i> Admin Panel</button>
+    <button onclick="showSection('telegram')"><i data-lucide="send"></i> Telegram</button>
   </nav>
 
+  <section id="home" class="section active">
+    <div class="card">
+      <h3>Bem-vindo(a) ao Eleven Modys</h3>
+      <p>Seu portal oficial para mods, hacks e ferramentas exclusivas para jogos mobile.</p>
+      <p>Explore nossas seções para baixar, assistir e participar da comunidade.</p>
+    </div>
+  </section>
+
   <section id="admin" class="section">
+    <!-- NOVO MOD FIXADO -->
+    <div class="card" style="border: 2px solid #ff0; box-shadow: 0 0 12px #ff0;">
+      <h3 style="color: #ff0;">Admin Panel Bed Wars (Atualizado)</h3>
+      <p style="color: #fff;">A versão mais recente e poderosa para dominar o Bed Wars com controle absoluto!</p>
+      <iframe src="https://www.youtube.com/embed/GzH1sZ8lvCY" title="Admin Panel Bed Wars"></iframe>
+      <p><a href="https://www.mediafire.com/file/fxv6qasbettfmmc/Blockman+GO_signed.apk/file" target="_blank">Download Atualizado</a></p>
+      <p style="color: #ff0;"><strong>Download Exclusivo por Eleven Modys</strong></p>
+    </div>
+
+    <!-- MOD 1 -->
     <div class="card">
       <h3>Eternal Hack</h3>
       <p>Speed mod and hack for a unique experience.</p>
@@ -177,11 +176,12 @@
       <p><strong>Download By Eleven Modys</strong></p>
     </div>
 
+    <!-- MOD 2 -->
     <div class="card">
       <h3>Mod de Duplicar no Jailbreak</h3>
       <p>Use esse mod para duplicar no Jailbreak de forma prática e eficiente.</p>
       <iframe src="https://www.youtube.com/embed/Ib_8q8vnF20" title="Mod Jailbreak"></iframe>
-      <p><a href="https://www.mediafire.com/file/4859l49w17fptfr/blockman-go.apk/file?dkey=cvwwss21lxi&r=561#&dkey=4859l49w17fptfr" target="_blank">Download Link</a></p>
+      <p><a href="https://www.mediafire.com/file/4859l49w17fptfr/blockman-go.apk/file" target="_blank">Download Link</a></p>
       <p><strong>Download By Eleven Modys</strong></p>
     </div>
   </section>
@@ -189,31 +189,30 @@
   <section id="telegram" class="section">
     <div class="card">
       <h3>Telegram Community</h3>
-      <p><a href="https://t.me/ElevenModysCommunity" target="_blank">Visit Channel</a></p>
+      <p><a href="https://t.me/ElevenModysCommunity" target="_blank">Visite o canal no Telegram</a></p>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Eleven Modys Official — All rights reserved.</p>
+    <p>© 2025 Eleven Modys Official — Todos os direitos reservados.</p>
   </footer>
 
   <div id="download-gui" class="download-gui">
     <h2>Download Admin Panel Update</h2>
-    <p>Blockman Go No Password</p>
+    <p>Blockman Go Sem Senha</p>
     <p><strong>Eleven Modys</strong></p>
-    <button class="close-btn" onclick="closeDownloadGUI()">Close</button>
+    <button class="close-btn" onclick="closeDownloadGUI()">Fechar</button>
   </div>
 
   <script>
+    lucide.createIcons();
     function showSection(id) {
       document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
       document.getElementById(id).classList.add('active');
     }
-
     function openDownloadGUI() {
       document.getElementById('download-gui').style.display = 'block';
     }
-
     function closeDownloadGUI() {
       document.getElementById('download-gui').style.display = 'none';
     }
